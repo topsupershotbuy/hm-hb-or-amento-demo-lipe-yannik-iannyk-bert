@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Fast Design - Orçamento HiperMilhas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .background-texture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .geometric-waves {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            max-height: 60%;
+            object-fit: contain;
+            object-position: bottom;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-container {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            width: 280px;
+            z-index: 10;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin: 120px auto 80px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .template-item {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+            background: rgba(255, 255, 255, 0.02);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .template-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+        }
+
+        .template-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .download-button-container {
+            position: absolute;
+            top: 60px;
+            right: 120px;
+            z-index: 10;
+        }
+
+        .download-button {
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            width: 260px;
+            height: auto;
+        }
+
+        .download-button:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        .signature-container {
+            position: absolute;
+            top: 50%;
+            right: 60px;
+            transform: translateY(-50%);
+            width: 90px;
+            z-index: 10;
+        }
+
+        .signature-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Responsividade */
+        @media (max-width: 1200px) {
+            .templates-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+            }
+
+            .download-button-container {
+                right: 60px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .templates-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .logo-container {
+                width: 220px;
+                bottom: 30px;
+                right: 30px;
+            }
+            
+            .download-button-container {
+                top: 40px;
+                right: 40px;
+            }
+            
+            .download-button {
+                width: 200px;
+            }
+
+            .signature-container {
+                width: 70px;
+                right: 30px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .templates-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                margin-top: 140px;
+            }
+            
+            .logo-container {
+                width: 180px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .download-button-container {
+                top: 30px;
+                right: 20px;
+            }
+            
+            .download-button {
+                width: 160px;
+            }
+            
+            .signature-container {
+                width: 55px;
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background -->
+    <div class="background-container">
+        <!-- nome original SEM acento -->
+        <img src="fundo-textura-vermelho-3-2500kb.png" alt="Background" class="background-texture">
+        <!-- nome original SEM acento -->
+        <img src="elemento-ondas-geometricas-azul-4.png" alt="Geometric Waves" class="geometric-waves">
+    </div>
+
+    <!-- Content -->
+    <div class="content-wrapper">
+        <!-- Download Button -->
+        <div class="download-button-container">
+            <a href="orcamento.html">
+                <!-- nome original SEM acento -->
+                <img src="botao-download-11.png" alt="Download" class="download-button">
+            </a>
+        </div>
+
+        <!-- Templates Grid -->
+        <div class="templates-grid">
+            <div class="template-item">
+                <!-- nome original SEM acento -->
+                <img src="elemento-8-mostras-de-modelo-6.png" alt="Template 1">
+            </div>
+            <div class="template-item">
+                <!-- nome original SEM acento -->
+                <img src="elemento-8-mostras-de-modelo-7.png" alt="Template 2">
+            </div>
+            <div class="template-item">
+                <!-- nome original SEM acento -->
+                <img src="elemento-8-mostras-de-modelo-8.png" alt="Template 3">
+            </div>
+            <div class="template-item">
+                <!-- nome original SEM acento -->
+                <img src="elemento-8-mostras-de-modelo-9.png" alt="Template 4">
+            </div>
+        </div>
+
+        <!-- Signature -->
+        <div class="signature-container">
+            <!-- nome original SEM acento -->
+            <img src="assinatura-2x-2-color.png" alt="Signature">
+        </div>
+
+        <!-- Logo -->
+        <div class="logo-container">
+            <!-- nome original SEM acento -->
+            <img src="logotipomarca-tfd-5.png" alt="Track Fast Design">
+        </div>
+    </div>
+</body>
+</html>
