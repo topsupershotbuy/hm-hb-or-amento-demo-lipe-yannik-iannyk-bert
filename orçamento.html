@@ -1,1 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento - Projeto HiperMilhas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .background-texture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .geometric-waves {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            max-height: 60%;
+            object-fit: contain;
+            object-position: bottom;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            padding: 80px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            width: 280px;
+            z-index: 10;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .signature-container {
+            position: absolute;
+            top: 50%;
+            right: 40px;
+            transform: translateY(-50%);
+            width: 60px;
+            z-index: 10;
+        }
+
+        .signature-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .budget-box {
+            background: white;
+            border-radius: 16px;
+            padding: 50px 60px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .budget-box h1 {
+            color: #d32f2f;
+            font-size: 32px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .budget-box h2 {
+            color: #1976d2;
+            font-size: 24px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        .budget-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+
+        .budget-list li {
+            margin: 20px 0;
+            padding: 18px 25px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border-left: 5px solid #1976d2;
+        }
+
+        .budget-list li:hover {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(25, 118, 210, 0.3);
+        }
+
+        .budget-list a {
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            display: block;
+        }
+
+        .budget-list a:hover {
+            color: #1976d2;
+        }
+
+        .budget-description {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 25px;
+            padding: 0 20px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 900px) {
+            .logo-container {
+                width: 220px;
+                bottom: 30px;
+                right: 30px;
+            }
+            
+            .budget-box {
+                padding: 40px 40px;
+            }
+            
+            .budget-box h1 {
+                font-size: 28px;
+            }
+            
+            .budget-box h2 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .content-wrapper {
+                padding: 60px 15px;
+            }
+            
+            .logo-container {
+                width: 180px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .signature-container {
+                width: 45px;
+                right: 20px;
+            }
+            
+            .budget-box {
+                padding: 30px 25px;
+            }
+            
+            .budget-box h1 {
+                font-size: 24px;
+            }
+            
+            .budget-box h2 {
+                font-size: 18px;
+            }
+            
+            .budget-list a {
+                font-size: 16px;
+            }
+            
+            .budget-description {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background -->
+    <div class="background-container">
+        <img src="fundo-textura-vermelho-3-2500kb.png" alt="Background" class="background-texture">
+        <img src="elemento-ondas-geométricas-azuis-4.png" alt="Geometric Waves" class="geometric-waves">
+    </div>
+
+    <!-- Content -->
+    <div class="content-wrapper">
+        <!-- Budget Box -->
+        <div class="budget-box">
+            <h1>Projeto HiperMilhas</h1>
+            <h2>Plataforma de Marketing de Incentivo</h2>
+            
+            <p class="budget-description">
+                Desenvolvimento de ecossistema completo para plataforma de marketing de incentivo com sistema de milhagens integrado ao Hiberbet.com.br
+            </p>
+            
+            <ul class="budget-list">
+                <li>
+                    <a href="#" target="_blank">📊 Orçamento Completo - Desenvolvimento da Plataforma</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">🎨 Orçamento - Design e UX/UI</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">💻 Orçamento - Desenvolvimento Backend e APIs</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">🛒 Orçamento - Sistema de Catálogo e E-commerce</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">🎯 Orçamento - Sistema de Milhagens e Gamificação</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">🔧 Orçamento - Manutenção e Suporte</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Signature -->
+        <div class="signature-container">
+            <img src="ass-2x-2-color.png" alt="Signature">
+        </div>
+
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="logomarca-tfd-5.png" alt="Track Fast Design">
+        </div>
+    </div>
+</body>
+</html>
